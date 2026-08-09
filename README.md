@@ -14,9 +14,11 @@
 <img src="https://img.shields.io/badge/FL-Federated%20Learning-f2cc60?style=flat-square&labelColor=161b22" alt="Federated Learning" />
 
 <p>
-  Graduate student exploring how intelligent agents learn, coordinate, and make decisions in real-world systems.
+  🎓 Graduate student exploring how intelligent agents learn, coordinate, and make decisions in real-world systems.
   <br />
-  <sub>Current focus: multi-agent reinforcement learning, spatial crowdsourcing, federated systems, and LLM agents.</sub>
+  🔬 Current focus: multi-agent reinforcement learning, spatial crowdsourcing, federated systems, and LLM agents.
+  <br /><br />
+  <sub>🤖 Trying to make agents cooperate better than humans in group projects — still debugging the human baseline. ☕</sub>
 </p>
 
 </div>
@@ -64,5 +66,5 @@
 </p>
 
 <div align="center">
-  <sub>Research → Build → Iterate → Repeat ☕</sub>
+  <sub>🔬 Research → 💻 Build → 🔁 Iterate → ☕ Repeat</sub>
 </div>
