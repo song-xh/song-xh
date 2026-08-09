@@ -28,9 +28,15 @@ jobs:
       - name: Generate streak card
         uses: DenverCoder1/github-readme-streak-stats@main
         with:
-          options: user=${{ github.repository_owner }}&theme=github-dark&background=0D1117&border=30363D&stroke=30363D&ring=58A6FF&fire=F2CC60&currStreakNum=F0F6FC&sideNums=F0F6FC&currStreakLabel=58A6FF&sideLabels=8B949E&dates=8B949E&border_radius=6&card_width=495&card_height=195
+          options: user=${{ github.repository_owner }}&theme=github-dark&background=0D1117&border=F0F6FC&stroke=30363D&ring=58A6FF&fire=F2CC60&currStreakNum=F0F6FC&sideNums=F0F6FC&currStreakLabel=58A6FF&sideLabels=8B949E&dates=8B949E&border_radius=6&card_width=495&card_height=195
           path: profile/streak.svg
           token: ${{ secrets.METRICS_TOKEN }}
+
+      - name: Apply card font
+        run: |
+          sed -i \
+            -e "s/font-family='\"Segoe UI\", Ubuntu, sans-serif'/font-family='\"Comic Sans MS\", \"Segoe Print\", \"Bradley Hand\", cursive'/g" \
+            profile/streak.svg
 
       - name: Commit streak card
         run: |
