@@ -23,7 +23,7 @@
   <img
     src="./profile-summary-card-output/github_dark/0-profile-details.svg"
     alt="GitHub profile details"
-    height="185"
+    height="170"
   />
 </p>
 
@@ -31,12 +31,12 @@
   <img
     src="./profile-summary-card-output/github_dark/3-stats.svg"
     alt="GitHub statistics"
-    height="185"
+    height="170"
   />
   <img
     src="./profile-summary-card-output/github_dark/1-repos-per-language.svg"
     alt="Most used languages"
-    height="185"
+    height="170"
   />
 </p>
 
