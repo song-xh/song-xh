@@ -2,13 +2,12 @@
 
 # Hi, I'm Eriksen Wayne 👋
 
-🎓 Graduate student exploring how **agents learn, cooperate, plan, and occasionally refuse to cooperate**.
+🎓 Graduate student · 🤖 AI researcher · 💻 builder of agents
 
-🤖 Mostly working on **Multi-Agent Reinforcement Learning**, **Spatial Crowdsourcing**, and **Federated Learning**.
+Exploring how agents learn, coordinate, and make decisions —  
+preferably before the GPU starts asking for a break.
 
-🧠 Also interested in **LLM Agents**, **Embodied AI**, **UAV decision-making**, and anything that makes machines a little smarter without making GPUs too sad.
-
-☕ Research status: `training...` &nbsp; 📄 Paper status: `one more experiment` &nbsp; 🐛 Code status: `works on my machine`
+`MARL` · `Spatial Crowdsourcing` · `Federated Learning`
 
 </div>
 
@@ -16,32 +15,30 @@
 
 ### 🔬 Research
 
-- 🤝 **Multi-Agent Reinforcement Learning** — heterogeneous cooperation, coordination, specialization & re-specialization
-- 📍 **Spatial Crowdsourcing** — task assignment, cross-platform collaboration, auction & sequential decision-making
-- 🔐 **Federated Learning** — privacy-preserving distributed learning and cross-platform knowledge sharing
+- **Multi-Agent Reinforcement Learning** — coordination, specialization, and decentralized decision-making
+- **Spatial Crowdsourcing** — task assignment, auctions, and sequential decision-making
+- **Federated Learning** — privacy-preserving collaborative learning
 
 ### 🌱 Interested in
 
-`LLM Agents` · `Embodied AI` · `Multi-Agent Systems` · `UAV/Robot Planning` · `Offline RL` · `Optimization`
+`LLM Agents` · `Embodied AI` · `Multi-Agent Systems` · `UAV / Robot Planning` · `Offline RL` · `Optimization`
 
-> *Trying to make agents cooperate better than humans in group projects.* 🤖🤝
+> Trying to make agents cooperate better than humans in group projects. 🤖🤝
 
 ---
 
-## 📊 GitHub Metrics
+## 📊 GitHub at a glance
 
-<img src="./github-metrics.svg" width="100%" alt="GitHub metrics" />
+<p align="center">
+  <img src="./github-metrics.svg" alt="GitHub metrics" width="520" />
+</p>
 
-<img src="./metrics.languages.svg" width="100%" alt="Languages" />
-
-<img src="./metrics.calendar.svg" width="100%" alt="Contribution calendar" />
-
-<img src="./metrics.activity.svg" width="100%" alt="Recent activity" />
-
-<img src="./metrics.habits.svg" width="100%" alt="Coding habits" />
+<p align="center">
+  <img src="./metrics.calendar.svg" alt="Contribution calendar" width="720" />
+</p>
 
 <div align="center">
 
-🧪 **Research → Code → Bugs → Coffee → Repeat.** ☕
+`Research → Code → Bugs → Coffee → Repeat` ☕
 
 </div>
