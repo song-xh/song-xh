@@ -1,4 +1,4 @@
-name: Metrics
+name: Profile Cards
 
 on:
   schedule:
@@ -7,50 +7,55 @@ on:
   push:
     branches:
       - main
+    paths:
+      - ".github/workflows/metrics.yml"
 
 permissions:
   contents: write
 
+concurrency:
+  group: profile-cards
+  cancel-in-progress: false
+
 jobs:
-  profile:
+  generate:
+    name: Generate profile cards
     runs-on: ubuntu-latest
 
     steps:
-      - name: Generate component-style profile metrics
-        uses: lowlighter/metrics@latest
+      - name: Verify METRICS_TOKEN
+        env:
+          PROFILE_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          EXPECTED_LOGIN: ${{ github.repository_owner }}
+        run: |
+          if [ -z "$PROFILE_TOKEN" ]; then
+            echo "::error::Repository secret METRICS_TOKEN is missing."
+            exit 1
+          fi
+
+          login="$(curl --fail --silent --show-error --retry 3 \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $PROFILE_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/user | jq -r '.login')"
+
+          if [ "$login" != "$EXPECTED_LOGIN" ]; then
+            echo "::error::METRICS_TOKEN authenticated as '$login', expected '$EXPECTED_LOGIN'."
+            exit 1
+          fi
+
+          echo "METRICS_TOKEN authenticated as $login."
+
+      - uses: actions/checkout@v4
+
+      - name: Generate GitHub profile summary cards
+        uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.METRICS_TOKEN }}
         with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          filename: github-metrics.svg
-          base: header, activity, community, repositories
-          config_display: columns
-          config_padding: 0
-          config_timezone: Asia/Shanghai
-
-          plugin_languages: yes
-          plugin_languages_limit: 6
-          plugin_languages_ignored: html, css, tex, shell
-
-          plugins_errors_fatal: yes
-          retries: 3
-          retries_delay: 60
-          retries_output_action: 3
-          retries_delay_output_action: 60
-
-      - name: Generate contribution calendar
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.METRICS_TOKEN }}
-          filename: metrics.calendar.svg
-          base: ""
-          config_display: regular
-          config_padding: 0
-          config_timezone: Asia/Shanghai
-
-          plugin_calendar: yes
-          plugin_calendar_limit: 1
-
-          plugins_errors_fatal: yes
-          retries: 3
-          retries_delay: 60
-          retries_output_action: 3
-          retries_delay_output_action: 60
+          USERNAME: ${{ github.repository_owner }}
+          BRANCH_NAME: "main"
+          UTC_OFFSET: 8
+          EXCLUDE: "HTML,CSS,TeX,Shell"
+          AUTO_PUSH: true
+          THEME: "github_dark"
