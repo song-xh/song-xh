@@ -34,8 +34,21 @@
     height="170"
   />
   <img
+    src="./profile/streak.svg"
+    alt="GitHub contribution streak"
+    height="170"
+  />
+</p>
+
+<p align="center">
+  <img
     src="./profile-summary-card-output/github_dark/1-repos-per-language.svg"
-    alt="Most used languages"
+    alt="Most used languages by repository"
+    height="170"
+  />
+  <img
+    src="./profile-summary-card-output/github_dark/2-most-commit-language.svg"
+    alt="Most used languages by commit"
     height="170"
   />
 </p>
