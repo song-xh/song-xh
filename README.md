@@ -7,14 +7,17 @@
 
 <br />
 
-<img src="https://img.shields.io/badge/Python-0d1117?style=flat-square&logo=python&logoColor=58a6ff" alt="Python" />
-<img src="https://img.shields.io/badge/TypeScript-0d1117?style=flat-square&logo=typescript&logoColor=79c0ff" alt="TypeScript" />
-<img src="https://img.shields.io/badge/Java-0d1117?style=flat-square&logo=openjdk&logoColor=f2cc60" alt="Java" />
-<img src="https://img.shields.io/badge/Shell-0d1117?style=flat-square&logo=gnubash&logoColor=7ee787" alt="Shell" />
+<img src="https://img.shields.io/badge/RL-Reinforcement%20Learning-8b5cf6?style=flat-square&labelColor=161b22" alt="Reinforcement Learning" />
+<img src="https://img.shields.io/badge/MAS-Multi--Agent%20Systems-58a6ff?style=flat-square&labelColor=161b22" alt="Multi-Agent Systems" />
+<img src="https://img.shields.io/badge/LLM-LLM%20Agents-22d3ee?style=flat-square&labelColor=161b22" alt="LLM Agents" />
+<img src="https://img.shields.io/badge/SC-Spatial%20Crowdsourcing-f472b6?style=flat-square&labelColor=161b22" alt="Spatial Crowdsourcing" />
+<img src="https://img.shields.io/badge/FL-Federated%20Learning-f2cc60?style=flat-square&labelColor=161b22" alt="Federated Learning" />
 
-<br />
-
-<sub>Research code for cooperative agents, federated systems, and practical AI.</sub>
+<p>
+  Graduate student exploring how intelligent agents learn, coordinate, and make decisions in real-world systems.
+  <br />
+  <sub>Current focus: multi-agent reinforcement learning, spatial crowdsourcing, federated systems, and LLM agents.</sub>
+</p>
 
 </div>
 
