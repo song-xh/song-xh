@@ -57,5 +57,22 @@ jobs:
           BRANCH_NAME: "main"
           UTC_OFFSET: 8
           EXCLUDE: "HTML,CSS,TeX,Shell"
-          AUTO_PUSH: true
+          AUTO_PUSH: false
           THEME: "github_dark"
+
+      - name: Apply card frame and font
+        run: |
+          for card in profile-summary-card-output/github_dark/*.svg; do
+            sed -i \
+              -e 's/stroke="#2e343b" stroke-width="1"/stroke="#f0f6fc" stroke-width="1.25"/g' \
+              -e "s/font-family: 'Segoe UI', Ubuntu, \"Helvetica Neue\", Sans-Serif/font-family: 'Comic Sans MS', 'Segoe Print', 'Bradley Hand', cursive/g" \
+              "$card"
+          done
+
+      - name: Commit profile cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile-summary-card-output/github_dark
+          git commit -m "chore: update profile cards" || exit 0
+          git push
